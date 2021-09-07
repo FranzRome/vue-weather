@@ -1,5 +1,10 @@
 # vue-weather
 
+## Description and Usage
+This is a simple weather app made in Vue.js using API calls
+
+To see the weather type in the search bar the location you want to fetch from the API
+
 ## Project setup
 ```
 npm install
