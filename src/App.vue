@@ -1,5 +1,5 @@
 <template>
-   <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''">
+   <div id="app" :class="typeof weather.main != 'undefined' && kelvinToCelsius(weather.main.temp) > 16 ? 'warm' : 'cold'">
     <main>
       <div class="search-box">
         <input 
@@ -13,7 +13,7 @@
 
       <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
         <div class="location-box">
-          <div class="location">{{ weather.name }}, {{ weather.sys.country }}</div>
+          <div class="location">{{ weather.name }}, {{ weather.sys.country }}</div>\
           <div class="date">{{ dateBuilder() }}</div>
         </div>
 
@@ -79,7 +79,7 @@ body {
 }
 
 #app {
-  background-image: url('./assets/cold-bg.jpg');
+  //background-image: url('./assets/cold-bg.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4s;
@@ -90,6 +90,14 @@ main {
   padding: 25px;
 
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0,  0.75))
+}
+
+.cold {
+  background-image: url('./assets/cold-bg.jpg');
+}
+
+.warm {
+  background-image: url('./assets/warm-bg.jpg');
 }
 
 .search-box{
