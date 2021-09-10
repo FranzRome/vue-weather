@@ -2,9 +2,9 @@
    <div id="app" :class="typeof weather.main != 'undefined' && kelvinToCelsius(weather.main.temp) > 16 ? 'warm' : 'cold'">
     <main>
       <div class="search-box">
-        <input 
-          type="text" 
-          class="search-bar" 
+        <input
+          type="text"
+          class="search-bar"
           placeholder="Search..."
           v-model="query"
           @keypress="fetchWeather"
@@ -76,10 +76,12 @@ export default {
 
 body {
   font-family: 'montserrat', sans-serif;
+  background-color: rgb(15,15,15)
 }
 
 #app {
-  //background-image: url('./assets/cold-bg.jpg');
+  max-width: 61.8vh;
+  margin: auto;
   background-size: cover;
   background-position: bottom;
   transition: 0.4s;
@@ -109,7 +111,7 @@ main {
   display: block;
   width: 100%;
   padding: 15px;
-  
+
   color: #313131;
   font-size: 20px;
   appearance: none;
