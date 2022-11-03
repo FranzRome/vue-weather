@@ -152,7 +152,7 @@ main {
    display: block;
    width: 100%;
    padding: 15px;
-
+   margin-top: 12px;
    color: #313131;
    font-size: 20px;
    appearance: none;
