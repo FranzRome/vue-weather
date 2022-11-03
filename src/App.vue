@@ -163,12 +163,14 @@ main {
    background-color: rgba(255, 255, 255, 0.5);
    border-radius: 0px 16px 0px 16px;
    transition: 0.4s;
+   box-shadow: 8px 6px 8px #252525;
 }
 
 .search-box .search-bar:focus {
    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
    background-color: rgba(255, 255, 255, 0.75);
    border-radius: 16px 0px 16px 0px;
+   box-shadow: 0px 0px 12px #252525;
 }
 .location-box .location {
    color: #fff;
@@ -210,5 +212,6 @@ main {
 .mobile-hint {
    color: aliceblue;
    text-align: center;
+   text-shadow: 2px 2px 2px #252525;
 }
 </style>
