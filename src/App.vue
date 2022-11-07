@@ -174,14 +174,14 @@ main {
 }
 .location-box .location {
    color: #fff;
-   font-size: 32px;
+   font-size: min(8vw, 32px);
    font-weight: 500;
    text-align: center;
    text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
 }
 .location-box .date {
    color: #fff;
-   font-size: 20px;
+   font-size: min(6vw, 20px);
    font-weight: 300;
    font-style: italic;
    text-align: center;
@@ -197,6 +197,7 @@ main {
    font-size: min(20vw, 80px);
    font-weight: 900;
    text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+   text-align: center;
    background-color: rgba(255, 255, 255, 0.25);
    border-radius: 16px;
    margin: 30px 0px;
