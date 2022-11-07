@@ -14,7 +14,7 @@
             <input
                type="text"
                class="search-bar"
-               placeholder="Search..."
+               placeholder="City..."
                v-model="query"
                @keypress="fetchWeather"
             />
