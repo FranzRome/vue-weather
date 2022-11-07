@@ -25,7 +25,6 @@
                <div class="location">
                   {{ weather.name }}, {{ weather.sys.country }}
                </div>
-               \
                <div class="date">{{ dateBuilder() }}</div>
             </div>
 
