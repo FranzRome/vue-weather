@@ -32,7 +32,7 @@
                <div class="temp">
                   {{ Math.round(kelvinToCelsius(weather.main.temp)) }}°c
                </div>
-               <div class="weather">{{ weather.weather[0].main }}</div>
+               <div class="weather">Weather: {{ weather.weather[0].main }}</div>
             </div>
          </div>
       </main>
