@@ -9,15 +9,16 @@
       "
    >
       <main>
-         <h3 class="mobile-hint">On mobile: Press Enter TWO Times</h3>
+         <!--h3 class="mobile-hint">On mobile: Press Enter TWO Times</h3-->
          <div class="search-box">
             <input
                type="text"
                class="search-bar"
                placeholder="City..."
                v-model="query"
-               @keypress="fetchWeather"
+               @keypress.enter="fetchWeather"
             />
+            <button class="search-button" @click="fetchWeather">Search</button>
          </div>
 
          <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
@@ -52,7 +53,6 @@ export default {
    },
    methods: {
       fetchWeather(e) {
-         if (e.key == "Enter") {
             fetch(
                `${this.url_base}weather?q=${this.query}&appid=${this.api_key}`
             )
@@ -60,7 +60,6 @@ export default {
                   return res.json();
                })
                .then(this.setResults);
-         }
       },
       setResults(results) {
          this.weather = results;
@@ -165,13 +164,32 @@ main {
    transition: 0.4s;
    box-shadow: 8px 6px 8px #252525;
 }
-
 .search-box .search-bar:focus {
    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
    background-color: rgba(255, 255, 255, 0.75);
    border-radius: 16px 0px 16px 0px;
    box-shadow: 0px 0px 12px #252525;
 }
+
+.search-box .search-button {
+   display: block;
+   width: 140px;
+   height: 50px;
+   margin: 18px auto;
+   border-width: 0px;
+   border-radius: 14px;
+   font-size: 18pt;
+   color: rgb(40, 40, 40);
+   background-color: rgb(65, 231, 123);
+   transition: 0.2s;
+}
+.search-box .search-button:hover {
+   transform: scale(1.1);
+}
+.search-box .search-button:active {
+   transform: scale(0.95);
+}
+
 .location-box .location {
    color: #fff;
    font-size: min(8vw, 32px);
