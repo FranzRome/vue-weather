@@ -158,36 +158,40 @@ main {
    border: none;
    outline: none;
    background: none;
-   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
    background-color: rgba(255, 255, 255, 0.5);
+   box-shadow: 6px 4px 16px rgba(0, 0, 0);
    border-radius: 0px 16px 0px 16px;
    transition: 0.4s;
-   box-shadow: 8px 6px 8px #252525;
 }
 .search-box .search-bar:focus {
-   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
    background-color: rgba(255, 255, 255, 0.75);
+   box-shadow: 0px 0px 16px rgba(0, 0, 0);
    border-radius: 16px 0px 16px 0px;
-   box-shadow: 0px 0px 12px #252525;
 }
 
 .search-box .search-button {
    display: block;
    width: 140px;
    height: 50px;
-   margin: 18px auto;
+   margin: 24px auto;
    border-width: 0px;
-   border-radius: 14px;
+   border-radius: 12px 2px 12px 2px;
    font-size: 18pt;
-   color: rgb(40, 40, 40);
-   background-color: rgb(65, 231, 123);
+   color: rgba(30, 30, 30, 0.7);
+   background-color: rgba(255, 255, 255, 0.5);
+   box-shadow: 3px 2px 10px rgb(0, 0, 0);
    transition: 0.2s;
 }
 .search-box .search-button:hover {
    transform: scale(1.1);
+   border-radius: 2px 12px 2px 12px;
+   color: rgba(30, 30, 30, 0.8);
+   background-color: rgba(255, 255, 255, 0.75);
+   box-shadow: 4px 3px 16px rgb(0, 0, 0);
 }
 .search-box .search-button:active {
    transform: scale(0.95);
+   border-radius: 12px 2px 12px 2px;
 }
 
 .location-box .location {
