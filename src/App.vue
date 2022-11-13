@@ -53,13 +53,11 @@ export default {
    },
    methods: {
       fetchWeather(e) {
-            fetch(
-               `${this.url_base}weather?q=${this.query}&appid=${this.api_key}`
-            )
-               .then(res => {
-                  return res.json();
-               })
-               .then(this.setResults);
+         fetch(`${this.url_base}weather?q=${this.query}&appid=${this.api_key}`)
+            .then(res => {
+               return res.json();
+            })
+            .then(this.setResults);
       },
       setResults(results) {
          this.weather = results;
@@ -116,16 +114,34 @@ body {
 }
 
 #app {
-   max-width: 100%;
-   height: 100%;
+   width: 100%;
    margin: auto;
    background-size: cover;
    background-position: bottom;
    transition: 0.4s;
 }
 
+@media only screen and (min-width: 600px) {
+   #app {
+      width: 100%;
+      margin: auto;
+      background-size: cover;
+      background-position: bottom;
+      transition: 0.4s;
+   }
+}
+@media only screen and (min-width: 768px) {
+   #app {
+      width: 61.8vh;
+      margin: auto;
+      background-size: cover;
+      background-position: bottom;
+      transition: 0.4s;
+   }
+}
+
 main {
-   min-height: 100vh;
+   height: 100vh;
    padding: 25px;
 
    background-image: linear-gradient(
