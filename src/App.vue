@@ -116,7 +116,8 @@ body {
 }
 
 #app {
-   max-width: 61.8vh;
+   max-width: 100%;
+   height: 100%;
    margin: auto;
    background-size: cover;
    background-position: bottom;
@@ -130,12 +131,14 @@ main {
    background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.75)
+      rgba(0, 0, 0, 0.5)
    );
 }
 
 .cold {
    background-image: url("./assets/cold-bg.jpg");
+   max-width: 100%;
+   height: auto;
 }
 
 .warm {
