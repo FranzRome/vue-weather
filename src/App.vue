@@ -114,47 +114,26 @@ body {
 }
 
 #app {
-   width: 100%;
+   max-width: 61.8vh;
    margin: auto;
    background-size: cover;
    background-position: bottom;
    transition: 0.4s;
 }
 
-@media only screen and (min-width: 600px) {
-   #app {
-      width: 100%;
-      margin: auto;
-      background-size: cover;
-      background-position: bottom;
-      transition: 0.4s;
-   }
-}
-@media only screen and (min-width: 768px) {
-   #app {
-      width: 61.8vh;
-      margin: auto;
-      background-size: cover;
-      background-position: bottom;
-      transition: 0.4s;
-   }
-}
-
 main {
-   height: 100vh;
+   min-height: 100vh;
    padding: 25px;
 
    background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.75)
    );
 }
 
 .cold {
    background-image: url("./assets/cold-bg.jpg");
-   max-width: 100%;
-   height: auto;
 }
 
 .warm {
