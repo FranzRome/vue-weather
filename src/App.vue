@@ -53,11 +53,13 @@ export default {
    },
    methods: {
       fetchWeather(e) {
-         fetch(`${this.url_base}weather?q=${this.query}&appid=${this.api_key}`)
-            .then(res => {
-               return res.json();
-            })
-            .then(this.setResults);
+            fetch(
+               `${this.url_base}weather?q=${this.query}&appid=${this.api_key}`
+            )
+               .then(res => {
+                  return res.json();
+               })
+               .then(this.setResults);
       },
       setResults(results) {
          this.weather = results;
